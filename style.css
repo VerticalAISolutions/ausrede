@@ -1,0 +1,92 @@
+:root {
+    --neon-green: #CCFF00;
+    --electric-purple: #6600FF;
+    --hot-pink: #FF69B4;
+}
+
+body {
+    background-color: var(--neon-green);
+    font-family: 'Arial Black', sans-serif;
+    overflow-x: hidden;
+}
+
+.shake-container {
+    animation: shake 5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate3d(-10px, 0, 0); }
+    20%, 40%, 60%, 80% { transform: translate3d(10px, 0, 0); }
+}
+
+h1 {
+    font-size: 8vw;
+    text-transform: uppercase;
+    color: var(--electric-purple);
+    margin-bottom: 2rem;
+    transform: skew(-5deg);
+}
+
+.form-container {
+    background-color: var(--hot-pink);
+    padding: 2rem;
+    border-radius: 20px;
+    transform: rotate(-1deg);
+}
+
+.form-label {
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.form-control {
+    border: 3px solid var(--electric-purple);
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-control:focus {
+    box-shadow: 0 0 20px var(--electric-purple);
+}
+
+.btn-primary {
+    background-color: var(--electric-purple);
+    border: none;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    transform: rotate(2deg);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--neon-green);
+    color: var(--electric-purple);
+    transform: scale(1.1) rotate(-2deg);
+}
+
+#result {
+    background-color: var(--electric-purple);
+    color: var(--neon-green);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-top: 3rem;
+    transform: rotate(1deg);
+}
+
+#excuseText {
+    font-size: 2rem;
+    line-height: 1.4;
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translate(0, 0px); }
+    50% { transform: translate(0, 15px); }
+    100% { transform: translate(0, -0px); }
+} 
