@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAZY AUSREDEN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="shake-container">
+        <div class="container mt-5">
+            <h1 class="floating">CRAZY AUSREDEN GENERATOR</h1>
+            
+            <div class="form-container">
+                <form id="excuseForm" class="needs-validation" novalidate>
+                    <div class="mb-4">
+                        <label for="name" class="form-label">DEIN NAME</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="recipient" class="form-label">FÜR WEN?</label>
+                        <input type="text" class="form-control" id="recipient" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="situation" class="form-label">WAS IST PASSIERT?</label>
+                        <textarea class="form-control" id="situation" rows="3" required></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="email" class="form-label">DEINE E-MAIL</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">GENERIERE AUSREDE!</button>
+                </form>
+            </div>
+
+            <div id="result" style="display: none;">
+                <h2 class="floating">DEINE CRAZY AUSREDE:</h2>
+                <p id="excuseText"></p>
+                
+                <div id="audioSection" class="mt-4">
+                    <h3 class="floating">HÖREN:</h3>
+                    <audio id="excuseAudio" controls class="w-100 mt-3"></audio>
+                    <button id="sendEmail" class="btn btn-primary mt-4">AB IN DEINE INBOX!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
